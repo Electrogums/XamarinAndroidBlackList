@@ -1,0 +1,2 @@
+# XamarinAndroidBlackList
+Block incoming calls.
