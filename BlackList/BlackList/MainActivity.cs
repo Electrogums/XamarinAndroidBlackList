@@ -22,28 +22,25 @@ namespace BlackList
 
         DrawerLayout drawerLayout;
         NavigationView navigationView;
-     
-        protected override void OnCreate(Bundle savedInstanceState)
+
+       protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
             var toolbar = FindViewById<V7Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
 
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.SetDisplayShowTitleEnabled(false);
-            SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.abc_ic_star_black_36dp);
-            SupportActionBar.SetHomeButtonEnabled(true);
-
-            // Get our button from the layout resource,
-            // and attach an event to it
             drawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
-
             navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
+
             if (navigationView != null)
                 setupDrawerContent(navigationView);
+            ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, Resource.String.hello, Resource.String.hello);
+            drawerLayout.AddDrawerListener(toggle);
+            toggle.SyncState();
+
 
             int Request = 0;
             if ((int)Build.VERSION.SdkInt >= 23)
