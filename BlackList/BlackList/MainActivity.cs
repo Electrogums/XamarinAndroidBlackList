@@ -10,8 +10,11 @@ using Android.Support.V4.Widget;
 using Android.Views;
 using Android.Support.Design.Widget;
 using V7Toolbar = Android.Support.V7.Widget.Toolbar;
-
-
+using System;
+using BlackList.Util;
+using System.Collections.Generic;
+using BlackList.Poco;
+using Java.Lang;
 
 namespace BlackList
 {
@@ -23,34 +26,23 @@ namespace BlackList
         DrawerLayout drawerLayout;
         NavigationView navigationView;
 
-       protected override void OnCreate(Bundle savedInstanceState)
+        protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Main);
-
-            var toolbar = FindViewById<V7Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            drawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
-            navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
-
-            if (navigationView != null)
-                setupDrawerContent(navigationView);
-            ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, Resource.String.hello, Resource.String.hello);
-            drawerLayout.AddDrawerListener(toggle);
-            toggle.SyncState();
+            inicializaUI();
+            inicializaPermisos();
+            inicializaRegistro();
+            navigationView.Menu.GetItem(0).SetChecked(true);
+            setFragment(0);
+        }
 
 
-            int Request = 0;
-            if ((int)Build.VERSION.SdkInt >= 23)
-            {
-                if (CheckSelfPermission(Manifest.Permission.ReadPhoneState) != Permission.Granted)
-                       RequestPermissions((new string[] {
-                          Manifest.Permission.ReadPhoneState 
-                          }),Request);
-            }
-            if (CheckSelfPermission(Manifest.Permission.ReadPhoneState) == Permission.Granted)
+
+        private void inicializaRegistro()
+        {
+            if (CheckSelfPermission(Manifest.Permission.ReadPhoneState) == Permission.Granted &&
+                CheckSelfPermission(Manifest.Permission.ReadCallLog) == Permission.Granted)
             {
                 Receiver.IncomingCallReceiver incoming = new Receiver.IncomingCallReceiver();
                 IntentFilter intent = new IntentFilter();
@@ -62,27 +54,90 @@ namespace BlackList
                 .Show();
 
         }
-        public override bool OnOptionsItemSelected(IMenuItem item)
+
+
+        private void inicializaPermisos()
         {
-            switch (item.ItemId)
+            int Request = 0;
+            if ((int)Build.VERSION.SdkInt >= 23)
             {
-                case Android.Resource.Id.Home:
-                    drawerLayout.OpenDrawer(Android.Support.V4.View.GravityCompat.Start);
-                    return true;
+                string[] permisos = new string[] {
+                          Manifest.Permission.ReadPhoneState,
+                          Manifest.Permission.ReadCallLog,
+                          };
+                if (CheckSelfPermission(Manifest.Permission.ReadPhoneState) != Permission.Granted ||
+                   CheckSelfPermission(Manifest.Permission.ReadCallLog) != Permission.Granted)
+                    RequestPermissions(permisos, Request);
+
             }
 
-            return base.OnOptionsItemSelected(item);
         }
+
+        private void inicializaUI()
+        {
+            var toolbar = FindViewById<V7Toolbar>(Resource.Id.toolbar);
+            SetSupportActionBar(toolbar);
+
+            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+            drawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
+            navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
+
+            if (navigationView != null)
+                setupDrawerContent(navigationView);
+
+            ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, Resource.String.hello, Resource.String.hello);
+            drawerLayout.AddDrawerListener(toggle);
+            toggle.SyncState();
+
+        }
+
         void setupDrawerContent(NavigationView navigationView)
         {
-            navigationView.NavigationItemSelected += (sender, e) => {
+            navigationView.NavigationItemSelected += (sender, e) =>
+            {
                 e.MenuItem.SetChecked(true);
+                switch (e.MenuItem.ItemId)
+                {
+                    case Resource.Id.navRecentCalls:
+                        setFragment(0);
+                        break;
+                    case Resource.Id.navBloquedNumbers:
+
+                        break;
+                    case Resource.Id.navLog:
+
+                        break;
+                    default:
+                        break;
+                }
+
                 drawerLayout.CloseDrawers();
             };
         }
 
+        public void setFragment(int position)
+        {
 
+            var transaction = SupportFragmentManager.BeginTransaction();
+          
+        
+
+            switch (position)
+            {
+
+                case 0:
+                    Fragments.CallLogFragment cl = new Fragments.CallLogFragment();
+                    transaction.Add(Resource.Id.flContent, cl);
+                    transaction.Commit();
+
+                    break;
+                case 1:
+         
+                    break;
+            }
+             
+
+        }
     }
-
 }
 
