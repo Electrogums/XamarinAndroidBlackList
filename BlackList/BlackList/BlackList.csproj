@@ -153,6 +153,8 @@
     <Compile Include="Util\CallLog.cs" />
     <Compile Include="Poco\EntCallLog.cs" />
     <Compile Include="Fragments\CallLogFragment.cs" />
+    <Compile Include="Util\AdapterContacts.cs" />
+    <Compile Include="Util\ContactViewHolder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -172,6 +174,7 @@
     <AndroidResource Include="Resources\values\styles.xml" />
     <AndroidResource Include="Resources\values\colors.xml" />
     <AndroidResource Include="Resources\layout\FragmentCallLog.xml" />
+    <AndroidResource Include="Resources\layout\CardContact.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

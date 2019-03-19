@@ -8,9 +8,12 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
+using Android.Support.V7.Widget;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
+using BlackList.Poco;
+using BlackList.Util;
 
 namespace BlackList.Fragments
 {
@@ -23,14 +26,27 @@ namespace BlackList.Fragments
 
             // Create your fragment here
         }
-
+        RecyclerView recyclerView;
+        RecyclerView.LayoutManager layoutManager;
+        AdapterContacts adapter;
+        List<string> lstnumeros = new List<string>();       
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            // Use this to return your custom view for this Fragme
+            CallLog cl = new CallLog();
+            List<EntCallLog> lstCallLog=cl.getCallLog(String.Empty,String.Empty);
+            foreach (EntCallLog item in lstCallLog)
+            {
+                lstnumeros.Add(item.numero);
+            }
 
-            return inflater.Inflate(Resource.Layout.FragmentCallLog, container, false);
-
-         //return base.OnCreateView(inflater, container, savedInstanceState);
+            View vw = inflater.Inflate(Resource.Layout.FragmentCallLog, container, false);
+            adapter = new AdapterContacts(vw.Context, lstnumeros);
+            recyclerView = vw.FindViewById<RecyclerView>(Resource.Id.recyclerView);
+            recyclerView.SetAdapter(adapter);
+            layoutManager = new LinearLayoutManager(vw.Context, LinearLayoutManager.Vertical, false);
+            recyclerView.SetLayoutManager(layoutManager);
+            return vw;
+            //return inflater.Inflate(Resource.Layout.FragmentCallLog, container, false);
         }
     }
 }

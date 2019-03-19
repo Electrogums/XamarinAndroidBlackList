@@ -7,9 +7,10 @@ namespace BlackList.Poco
     {
         public string numero { get; set; }
         public DateTime fecha { get; set; }
-        public string dureacion { get; set; }
+        public int duracion { get; set; }
         public Android.Provider.CallType tipo { get; set; }
         public string nombre { get; set; }
+        public string imageUri { get; set; }
 
     }
 }
