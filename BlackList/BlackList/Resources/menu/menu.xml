@@ -2,13 +2,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">  
         <group android:checkableBehavior="single">  
     <item  
-    android:id="@+id/navRecentCalls"  
-    android:title="Llamadas Recientes" />  
+    android:id="@+id/navOutGoing"  
+    android:title="Salientes"
+    android:icon="@drawable/outgoing"
+   />  
     <item  
-    android:id="@+id/navBloquedNumbers"  
-    android:title="Números Bloqueados"/>  
+    android:id="@+id/navIncoming"  
+    android:title="Entrantes"
+    android:icon="@drawable/incoming"/>  
     <item  
-    android:id="@+id/navLog"  
-    android:title="Llamadas Bloqueadas"/>  
-        </group>  
+    android:id="@+id/navMissed"  
+    android:title="Perdidas"
+    android:icon="@drawable/missed"/>  
+     <item  
+    android:id="@+id/navAll"  
+    android:title="Todas"
+    android:icon="@drawable/all"/>  
+    </group>  
     </menu>   

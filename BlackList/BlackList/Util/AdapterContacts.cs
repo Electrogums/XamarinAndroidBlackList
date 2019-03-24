@@ -12,25 +12,48 @@ namespace BlackList.Util
     public class AdapterContacts :V7.RecyclerView.Adapter
     {
 
-        List<string> numeros;     
         private Context context;
+        private List<EntCallLog> lstCallLog;
 
-        public AdapterContacts(Context context, List<string> numeros)
+        public AdapterContacts(Context context, List<EntCallLog> lstCallLog)
         {
             this.context = context;
-            this.numeros = numeros;
+            this.lstCallLog = lstCallLog;
         }
 
-        public override int ItemCount => numeros.Count;
+        public override int ItemCount => lstCallLog.Count;
 
         public override void OnBindViewHolder(V7.RecyclerView.ViewHolder viewHolder, int position)
         {
            
             // Replace the contents of the view with that element
-            var item = numeros[position];
+            var item = lstCallLog[position];
+            var holder = viewHolder as ContactViewHolder;
+            //holder.nombre.Text = item.nombre;
+            //holder.duracion.Text = item.duracion.ToString();
+                holder.fecha.Text = item.fecha.ToShortDateString();
+            //holder.tipo.Text = item.tipo.ToString();
+            if (item.nombre==null)
+                holder.numeroNombre.Text= item.numero.ToString();
+            else
+                holder.numeroNombre.Text = item.nombre;
+            switch (item.tipo)
+            {
+                case Android.Provider.CallType.Incoming:
+                    holder.imageUri.SetImageResource(Resource.Drawable.incoming);
+                    break;
+                case Android.Provider.CallType.Missed:
+                    holder.imageUri.SetImageResource(Resource.Drawable.missed);
+                    break;
 
-           var holder = viewHolder as ContactViewHolder;
-               holder.Caption.Text = item;
+                case Android.Provider.CallType.Outgoing:
+                    holder.imageUri.SetImageResource(Resource.Drawable.outgoing);
+                    break;
+                default:
+                    holder.imageUri.SetImageResource(Resource.Drawable.all);
+                    break;
+
+            }
 
         }
 

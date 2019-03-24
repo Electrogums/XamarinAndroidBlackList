@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="BlackList" t="IncludeRecursive">
+        <e p="Assets" t="Include">
+          <e p="AboutAssets.txt" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="BlackList.csproj" t="IncludeRecursive" />
+        <e p="Fragments" t="Include">
+          <e p="CallLogFragment.cs" t="Include" />
+        </e>
+        <e p="MainActivity.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Poco" t="Include">
+          <e p="EntCallLog.cs" t="Include" />
+        </e>
+        <e p="Properties" t="Include">
+          <e p="AndroidManifest.xml" t="Include" />
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Receiver" t="Include">
+          <e p="IncomingCallReceiver.cs" t="Include" />
+        </e>
+        <e p="Resources" t="Include">
+          <e p="AboutResources.txt" t="Include" />
+          <e p="drawable" t="Include">
+            <e p="all.png" t="Include" />
+            <e p="bloqued.png" t="Include" />
+            <e p="incoming.png" t="Include" />
+            <e p="missed.png" t="Include" />
+            <e p="outgoing.png" t="Include" />
+          </e>
+          <e p="layout" t="Include">
+            <e p="CardContact.xml" t="Include" />
+            <e p="FragmentCallLog.xml" t="Include" />
+            <e p="Main.axml" t="Include" />
+          </e>
+          <e p="menu" t="Include">
+            <e p="menu.xml" t="Include" />
+          </e>
+          <e p="mipmap-hdpi" t="Include">
+            <e p="Icon.png" t="Include" />
+          </e>
+          <e p="mipmap-mdpi" t="Include">
+            <e p="Icon.png" t="Include" />
+          </e>
+          <e p="mipmap-xhdpi" t="Include">
+            <e p="Icon.png" t="Include" />
+          </e>
+          <e p="mipmap-xxhdpi" t="Include">
+            <e p="Icon.png" t="Include" />
+          </e>
+          <e p="mipmap-xxxhdpi" t="Include">
+            <e p="Icon.png" t="Include" />
+          </e>
+          <e p="Resource.designer.cs" t="Include" />
+          <e p="values" t="Include">
+            <e p="colors.xml" t="Include" />
+            <e p="Strings.xml" t="Include" />
+            <e p="styles.xml" t="Include" />
+          </e>
+        </e>
+        <e p="Util" t="Include">
+          <e p="AdapterContacts.cs" t="Include" />
+          <e p="CallLog.cs" t="Include" />
+          <e p="ContactViewHolder.cs" t="Include" />
+        </e>
+      </e>
+      <e p="BlackList.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2018.3/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2018.3/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_BlackList.1506267058.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/Library/Developer/Xamarin/android-sdk-macosx/platforms/android-28/data/res" t="IncludeRecursive" />
+  </component>
+</project>

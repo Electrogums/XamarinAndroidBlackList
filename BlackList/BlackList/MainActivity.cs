@@ -95,41 +95,42 @@ namespace BlackList
         {
             navigationView.NavigationItemSelected += (sender, e) =>
             {
+                Fragments.CallLogFragment cl = new Fragments.CallLogFragment();
+                var transaction = SupportFragmentManager.BeginTransaction();
                 e.MenuItem.SetChecked(true);
                 switch (e.MenuItem.ItemId)
                 {
-                    case Resource.Id.navRecentCalls:
-                        setFragment(0);
+                    case Resource.Id.navOutGoing://salientes
+                        //setFragment(0);
+                        cl.tipoLlamada = Android.Provider.CallType.Outgoing;
                         break;
-                    case Resource.Id.navBloquedNumbers:
-
+                    case Resource.Id.navIncoming://entrantes
+                        cl.tipoLlamada = Android.Provider.CallType.Incoming;
                         break;
-                    case Resource.Id.navLog:
-
+                    case Resource.Id.navAll://todas
+                        cl.tipoLlamada = Android.Provider.CallType.AnsweredExternally;
                         break;
-                    default:
+                    case Resource.Id.navMissed://perdidas
+                        cl.tipoLlamada = Android.Provider.CallType.Missed;
                         break;
+                
                 }
-
+                transaction.Add(Resource.Id.flContent, cl);
+                transaction.Commit();
                 drawerLayout.CloseDrawers();
             };
         }
 
         public void setFragment(int position)
         {
-
-            var transaction = SupportFragmentManager.BeginTransaction();
           
-        
-
             switch (position)
             {
 
                 case 0:
-                    Fragments.CallLogFragment cl = new Fragments.CallLogFragment();
-                    transaction.Add(Resource.Id.flContent, cl);
-                    transaction.Commit();
-
+                    //Fragments.CallLogFragment cl = new Fragments.CallLogFragment();
+                    //transaction.Add(Resource.Id.flContent, cl);
+                    //transaction.Commit();
                     break;
                 case 1:
          

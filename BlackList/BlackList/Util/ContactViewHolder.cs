@@ -7,15 +7,26 @@ using BlackList.Poco;
 
 namespace BlackList.Util
 {
-    public class ContactViewHolder: RecyclerView.ViewHolder
+    public class ContactViewHolder : RecyclerView.ViewHolder
     {
-     
-        public TextView Caption { get; private set; }
+        public ImageView imageUri { get;  set; }
+        public TextView numeroNombre { get;  set; }
+        public TextView duracion { get;  set; }
+        public TextView tipo { get;  set; }
+        public TextView nombre { get;  set; }
+        public TextView fecha { get;  set; }
 
+        public ContactViewHolder(View item) : base(item)
+        {
 
-        public ContactViewHolder(View item) : base(item) {
-            Caption =  item.FindViewById<TextView>(Resource.Id.numero);
-         }
+            imageUri = item.FindViewById<ImageView>(Resource.Id.imageUri);
+            numeroNombre = item.FindViewById<TextView>(Resource.Id.numero);
+            //duracion = item.FindViewById<TextView>(Resource.Id.duracion);
+            //tipo = item.FindViewById<TextView>(Resource.Id.tipo);
+            //nombre = item.FindViewById<TextView>(Resource.Id.nombre);
+            fecha = item.FindViewById<TextView>(Resource.Id.fecha);
+
+        }
 
     }
 }

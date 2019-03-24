@@ -175,6 +175,11 @@
     <AndroidResource Include="Resources\values\colors.xml" />
     <AndroidResource Include="Resources\layout\FragmentCallLog.xml" />
     <AndroidResource Include="Resources\layout\CardContact.xml" />
+    <AndroidResource Include="Resources\drawable\all.png" />
+    <AndroidResource Include="Resources\drawable\bloqued.png" />
+    <AndroidResource Include="Resources\drawable\incoming.png" />
+    <AndroidResource Include="Resources\drawable\missed.png" />
+    <AndroidResource Include="Resources\drawable\outgoing.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
