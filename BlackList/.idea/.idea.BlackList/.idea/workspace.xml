@@ -67,12 +67,22 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BlackList/Resources/layout/CardContact.xml">
-          <provider editor-type-id="android-designer2" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
             </state>
           </provider>
+          <provider selected="true" editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BlackList/Resources/layout/Main.axml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="61" lean-forward="true" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="61" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
     </leaf>
@@ -106,19 +116,18 @@
       <facet id="BlackList/invalid/Android Facet - BlackList" />
     </ignored-facets>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="1494" />
-    <option name="y" value="23" />
-    <option name="width" value="1280" />
-    <option name="height" value="709" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="22" />
+    <option name="width" value="1360" />
+    <option name="height" value="710" />
   </component>
   <component name="ProjectView">
     <navigator currentView="SolutionExplorer" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="FileSystemExplorer" />
       <pane id="AssemblyExplorer" />
+      <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -135,6 +144,18 @@
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="BlackList" type="24d0babc:SolutionExplorerModelNode" />
               <item name="BlackList" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Assets" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="BlackList" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="BlackList" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Fragments" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="BlackList" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="BlackList" type="24d0babc:SolutionExplorerModelNode" />
               <item name="Resources" type="24d0babc:SolutionExplorerModelNode" />
             </path>
             <path>
@@ -142,7 +163,7 @@
               <item name="BlackList" type="24d0babc:SolutionExplorerModelNode" />
               <item name="BlackList" type="24d0babc:SolutionExplorerModelNode" />
               <item name="Resources" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="menu" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="layout" type="24d0babc:SolutionExplorerModelNode" />
             </path>
           </expand>
           <select />
@@ -233,12 +254,13 @@
       <option name="presentableId" value="Default" />
       <updated>1553053781531</updated>
       <workItem from="1553053784149" duration="4603000" />
-      <workItem from="1553376577171" duration="8014000" />
+      <workItem from="1553376577171" duration="8265000" />
+      <workItem from="1553657996461" duration="1810000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12617000" />
+    <option name="totallyTimeSpent" value="14678000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -250,7 +272,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1280" y="0" width="1360" height="768" extended-state="0" />
+    <frame x="0" y="22" width="1360" height="710" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23444612" />
@@ -273,14 +295,14 @@
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="NuGet" order="12" />
       <window_info anchor="bottom" id="Logcat" order="13" />
-      <window_info anchor="bottom" id="Unit Tests" order="14" visible="true" weight="0.29083094" />
+      <window_info anchor="bottom" id="Unit Tests" order="14" weight="0.2780822" />
       <window_info anchor="bottom" id="Database Changes" order="15" />
       <window_info anchor="bottom" id="Version Control" order="16" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="right" id="Preview" order="4" visible="true" weight="0.30955994" />
+      <window_info anchor="right" id="Preview" order="4" weight="0.32956383" />
       <window_info anchor="right" id="Device File Explorer" order="5" side_tool="true" />
       <window_info anchor="right" id="Database" order="6" weight="0.32956383" />
       <window_info anchor="right" id="Errors In Solution" order="7" weight="0.32956383" />
@@ -338,20 +360,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BlackList/Fragments/CallLogFragment.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="24" column="46" lean-forward="true" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
-          <folding>
-            <marker date="1553056414189" expanded="false" signature="7:310" ph="..." />
-            <marker date="1553056414189" expanded="true" signature="341:1556" ph="{...}" />
-            <marker date="1553056414189" expanded="true" signature="410:1554" ph="{...}" />
-            <marker date="1553056414189" expanded="true" signature="488:597" ph="{...}" />
-            <marker date="1553056414189" expanded="true" signature="838:1548" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BlackList/Resources/Resource.designer.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2216">
@@ -360,23 +368,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BlackList/Resources/layout/FragmentCallLog.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="46" lean-forward="true" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlackList/Resources/layout/Main.axml">
       <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="17" />
-          <folding>
-            <element signature="e#1226#1266#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BlackList/MainActivity.cs">
       <provider selected="true" editor-type-id="text-editor">
@@ -435,20 +432,35 @@
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/BlackList/Resources/menu/menu.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="31" lean-forward="true" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlackList/Resources/layout/CardContact.xml">
       <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlackList/Fragments/CallLogFragment.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+        <state relative-caret-position="225">
+          <caret line="30" column="54" lean-forward="true" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlackList/Resources/layout/Main.axml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="61" lean-forward="true" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="61" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlackList/Resources/layout/CardContact.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
   </component>
 </project>

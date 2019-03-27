@@ -34,7 +34,11 @@ namespace BlackList
             inicializaPermisos();
             inicializaRegistro();
             navigationView.Menu.GetItem(0).SetChecked(true);
-            setFragment(0);
+            Fragments.CallLogFragment cl = new Fragments.CallLogFragment();
+            var transaction = SupportFragmentManager.BeginTransaction();
+            cl.tipoLlamada = Android.Provider.CallType.Incoming;
+            transaction.Add(Resource.Id.flContent, cl);
+            transaction.Commit();
         }
 
 
@@ -89,6 +93,7 @@ namespace BlackList
             drawerLayout.AddDrawerListener(toggle);
             toggle.SyncState();
 
+
         }
 
         void setupDrawerContent(NavigationView navigationView)
@@ -115,30 +120,13 @@ namespace BlackList
                         break;
                 
                 }
-                transaction.Add(Resource.Id.flContent, cl);
+                transaction.Replace(Resource.Id.flContent, cl);
+                //transaction.AddToBackStack("home");
                 transaction.Commit();
                 drawerLayout.CloseDrawers();
             };
         }
 
-        public void setFragment(int position)
-        {
-          
-            switch (position)
-            {
-
-                case 0:
-                    //Fragments.CallLogFragment cl = new Fragments.CallLogFragment();
-                    //transaction.Add(Resource.Id.flContent, cl);
-                    //transaction.Commit();
-                    break;
-                case 1:
-         
-                    break;
-            }
-             
-
-        }
     }
 }
 

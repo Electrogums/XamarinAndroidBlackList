@@ -24,7 +24,6 @@ namespace BlackList.Fragments
         {
             base.OnCreate(savedInstanceState);
 
-            // Create your fragment here
         }
         RecyclerView recyclerView;
         RecyclerView.LayoutManager layoutManager;
@@ -34,11 +33,8 @@ namespace BlackList.Fragments
         {
             CallLog cl = new CallLog();
             string querySorter = System.String.Format("{0} desc ", log.Calls.Date);
-            //string queryWhere = System.String.Format("{0} CallType LIKE ?  ", tipoLlamada);
             string queryWhere = " type =  " +(int)tipoLlamada;
-
             List<EntCallLog> lstCallLog = cl.getCallLog((tipoLlamada==Android.Provider.CallType.AnsweredExternally?null:queryWhere), querySorter);
-       
             View vw = inflater.Inflate(Resource.Layout.FragmentCallLog, container, false);
             adapter = new AdapterContacts(vw.Context, lstCallLog);
             recyclerView = vw.FindViewById<RecyclerView>(Resource.Id.recyclerView);
@@ -46,7 +42,6 @@ namespace BlackList.Fragments
             layoutManager = new LinearLayoutManager(vw.Context, LinearLayoutManager.Vertical, false);
             recyclerView.SetLayoutManager(layoutManager);
             return vw;
-            //return inflater.Inflate(Resource.Layout.FragmentCallLog, container, false);
         }
     }
 }

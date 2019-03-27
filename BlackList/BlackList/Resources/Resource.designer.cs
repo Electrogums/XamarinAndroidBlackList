@@ -3350,14 +3350,14 @@ namespace BlackList
 			// aapt resource value: 0x7f0900c5
 			public const int navAll = 2131296453;
 			
-			// aapt resource value: 0x7f0900c3
-			public const int navIncoming = 2131296451;
+			// aapt resource value: 0x7f0900c2
+			public const int navIncoming = 2131296450;
 			
 			// aapt resource value: 0x7f0900c4
 			public const int navMissed = 2131296452;
 			
-			// aapt resource value: 0x7f0900c2
-			public const int navOutGoing = 2131296450;
+			// aapt resource value: 0x7f0900c3
+			public const int navOutGoing = 2131296451;
 			
 			// aapt resource value: 0x7f0900b1
 			public const int nav_view = 2131296433;
